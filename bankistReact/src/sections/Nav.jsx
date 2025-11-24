@@ -6,7 +6,9 @@ function Nav({onLogin}) {
     const pin = useRef(null);
     const loginSubmit = (e) => {
       e.preventDefault();
-      onLogin(username.current.value,pin.current.value)
+      onLogin(username.current.value, pin.current.value)
+      username.current.value =""
+      pin.current.value =""
     }
   return (
     <nav>
